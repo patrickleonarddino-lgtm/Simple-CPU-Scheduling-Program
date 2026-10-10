@@ -1,0 +1,340 @@
+/* =========================================================
+   ROOT VARIABLES  —  WHITE & LAVENDER THEME
+   ========================================================= */
+:root {
+  --bg:        #f7f5fb;
+  --panel:     #fbfaff;
+  --input-bg:  #f3f0ff;
+  --accent:    #8b5cf6;
+  --accent-2:  #a78bfa;
+  --accent-3:  #c4b5fd;
+  --text:      #1e1b4b;
+  --muted:     #6b7280;
+  --border:    #e9e5ff;
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f7f5fb, #ece7fa);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.container { max-width: 1100px; margin: 0 auto; }
+
+.panel {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.10);
+  border: 1px solid var(--border);
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+label {
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d8d0ff;
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input[type="number"]:focus {
+  outline: 2px solid var(--accent);
+  background: #ffffff;
+}
+
+small {
+  display: block;
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+button {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 8px;
+  transition: transform 0.1s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.25);
+}
+
+button:hover {
+  background: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow: none;
+}
+
+button.secondary:hover {
+  background: #f3f0ff;
+}
+
+/* =========================================================
+   FLEX ROW
+   ========================================================= */
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.row > div { flex: 1; min-width: 140px; }
+
+/* =========================================================
+   INPUT TABLE
+   ========================================================= */
+.input-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.input-table th,
+.input-table td {
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.input-table th {
+  background: #f3f0ff;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.input-table input[type="number"] {
+  text-align: center;
+  padding: 6px 4px;
+  font-size: 0.9rem;
+}
+
+.input-table .pid {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   RESULTS TABLE
+   ========================================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: #f3f0ff;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+tr:hover td { background: #faf9ff; }
+
+/* Slightly smaller font in results tables — many columns */
+.panel table {
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   CHART LABELS  (above Ready Queue & Gantt Chart)
+   ========================================================= */
+.chart-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   GANTT CHART
+   ========================================================= */
+.gantt {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 55px;
+  flex-wrap: nowrap;
+}
+
+.gantt-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-right: 2px solid #ffffff;
+  padding: 8px 4px;
+}
+
+.gantt-block:last-child { border-right: none; }
+
+.gantt-timeline {
+  display: flex;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* =========================================================
+   STAT CARDS  (AWT / ATT)
+   ========================================================= */
+.stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #faf9ff, #f3f0ff);
+  border-left: 4px solid var(--accent);
+  padding: 12px 18px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.stat-card .label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.stat-card .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* =========================================================
+   READY QUEUE  (matches Gantt chart layout)
+   ========================================================= */
+.ready-queue {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 45px;
+  flex-wrap: nowrap;
+}
+
+.rq-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  background: #f3f0ff;
+  border-right: 2px solid #ffffff;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.rq-cell:last-child { border-right: none; }
+
+/* =========================================================
+   EMPTY RESULT PLACEHOLDER
+   ========================================================= */
+.placeholder {
+  color: var(--accent);
+  font-style: italic;
+  padding: 15px;
+  background: #f3f0ff;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  line-height: 1.6;
+}
+
+.placeholder code {
+  background: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+.err {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* =========================================================
+   INPUT PLACEHOLDERS
+   ========================================================= */
+input[type="number"]::placeholder {
+  color: #a8a0c9;
+  opacity: 1;
+  font-style: italic;
+}
